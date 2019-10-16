@@ -1,0 +1,13 @@
+# vscode files
+.vscode/
+
+LICENSE_NOTICE
+
+# python3 files
+env/
+**/__pycache__
+*-info
+
+# test script files
+*.sh
+test/
