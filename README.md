@@ -1,6 +1,17 @@
 # the-useful-tools
 
+<br>
+
 These are some sets of tools that come in real handy for handling projects with large number of files to maintain. These commands can also be used to maintain small project files. **The toolkit is available for Linux environment only.**
+
+<br>
+
+## Installation
+
+You can install this console application using `pip3`, [link](https://pypi.org/project/the-useful-tools/). **Note: Only compatible with Python3**.
+<br>
+
+`pip3 install the-useful-tools`
 
 <br>
 
