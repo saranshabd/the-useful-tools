@@ -23,6 +23,7 @@ GITIGNORE: str = '''# vscode files
 **/*.out
 
 git.log
+LICENSE_NOTICE
 
 # script files
 **/*.sh

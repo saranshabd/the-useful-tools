@@ -28,6 +28,7 @@ node_modules/
 **/*.txt
 
 git.log
+LICENSE_NOTICE
 
 # script files
 **/*.sh

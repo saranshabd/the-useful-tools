@@ -27,6 +27,7 @@ env/
 **/*.txt
 
 git.log
+LICENSE_NOTICE
 
 # script files
 **/*.sh
