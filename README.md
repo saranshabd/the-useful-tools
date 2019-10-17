@@ -28,6 +28,10 @@ Following commands are available in our tookit:
   <br>
   Add files for staging, commit changes and push them to remote repository with a single command. Commit message option [-m] is a required option. Remote repository branch can be specified with the [-b] option, but its optional. By default, changes will be pushed to `origin master` (if the user confirms to push).
 
+- `useful git log`
+  <br>
+  When number of git commits go beyond 5-6, you can't view them all at once. When you execute `git log`, it open them in scrollable fashion. `useful git log` stores the logs in a file `git.log` (this file is ignored for git staging) and opens the file in `gedit`. This really helps the programmers to browse through all their commits.
+
 <br>
 
 #### Supported Programming Languages (with abbreviations)
