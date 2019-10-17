@@ -24,6 +24,12 @@ Following commands are available in our tookit:
   - LICENSE (optional)
   - LICENSE_NOTICE (created only if LICENSE is created)
 
+- `useful git commit [-m/--message] [-b/--branch]`
+  <br>
+  Add files for staging, commit changes and push them to remote repository with a single command. Commit message option [-m] is a required option. Remote repository branch can be specified with the [-b] option, but its optional. By default, changes will be pushed to `origin master` (if the user confirms to push).
+
+<br>
+
 #### Supported Programming Languages (with abbreviations)
 
 - C (c)
