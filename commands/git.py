@@ -5,6 +5,7 @@ import subprocess
 # import utils
 from utils.language import is_supported_language
 import utils.git as git_utils
+import utils.file as file_utils
 
 
 """
@@ -44,11 +45,43 @@ def init(language: str):
     git_utils.init()
 
     # create LICENSE
-    git_utils.create_license()
+    file_utils.create_license()
 
     # create README.md
-    git_utils.create_readme()
+    file_utils.create_readme()
 
     # create .gitignore
     if language is not None:
-        git_utils.create_gitignore(language)
+        file_utils.create_gitignore(language)
+
+
+@git.command('commit')
+@click.option('-m', '--message', required=True, type=str)
+@click.option('-b', '--branch', type=str)
+def commit(message: str, branch: str):
+    """commit changes to git repository"""
+
+    # check if git repository exists
+    if git_utils.check_git() is not True:
+        click.echo('ERROR: git repository for current directory does not exists')
+        return
+
+    # add changes for staging
+    git_utils.add()
+
+    # prompt to confirm if the user wants to commit changes
+    confirm_commit: bool = click.prompt(
+        'confirm commit?', default=True, type=bool)
+    if confirm_commit is False:
+        return
+
+    # commit changes
+    git_utils.commit(message)
+
+    # prompt to check if the user wants to push changes to a remote repository
+    confirm_push: bool = click.prompt('push changes?', default=True, type=bool)
+    if confirm_push is False:
+        return
+
+    # push to remote repository
+    git_utils.push(branch)
