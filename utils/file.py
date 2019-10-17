@@ -1,6 +1,7 @@
 import click
 from datetime import datetime
 import os
+from pathlib import Path
 
 """
     Copyright 2019 Shabd Saran
@@ -100,3 +101,40 @@ def create_gitignore(language: str) -> None:
     # create file
     with open('.gitignore', 'w') as file:
         file.write(GITIGNORE)
+
+
+def check_license_notice() -> bool:
+    """utility function to check if current directory contains license notice"""
+
+    return os.path.isfile('LICENSE_NOTICE')
+
+
+def create_empty_file(path: str) -> None:
+    """utility function to create a new empty file"""
+
+    Path(path).touch()
+
+
+def create_file_with_license_notice(path: str, file_extension: str) -> None:
+    """utility function to create a new file with license notice included"""
+
+    # load license notice
+    with open('LICENSE_NOTICE', 'r') as file:
+        license_notice: str = file.read()
+
+    # load new file template
+    if 'c' == file_extension or 'cpp' == file_extension:
+        from data.new_file.cpp import FILE_CONTENT
+    elif 'java' == file_extension:
+        from data.new_file.java import FILE_CONTENT
+    elif 'js' == file_extension:
+        from data.new_file.js import FILE_CONTENT
+    else:  # py
+        from data.new_file.py import FILE_CONTENT
+
+    # load user license notice into new file template
+    FILE_CONTENT = FILE_CONTENT.replace('[NOTICE]', license_notice)
+
+    # create new file using the template
+    with open(path, 'w') as file:
+        file.write(FILE_CONTENT)

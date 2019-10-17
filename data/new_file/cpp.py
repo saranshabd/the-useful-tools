@@ -1,4 +1,3 @@
-import click
 
 """
     Copyright 2019 Shabd Saran
@@ -16,15 +15,8 @@ import click
     limitations under the License.
 """
 
-# import all commands
-from commands.git import git
-from commands.touch import touch
-
-
-@click.group(invoke_without_command=True)
-def cli():
-    pass
-
-
-cli.add_command(git)
-cli.add_command(touch)
+FILE_CONTENT: str = '''
+/*
+[NOTICE]
+*/
+'''
