@@ -8,7 +8,7 @@ These are some sets of tools that come in real handy for handling projects with 
 
 ## Installation
 
-You can install this console application using `pip3`, [link](https://pypi.org/project/the-useful-tools/). **Note: Only compatible with Python3**.
+You can install this console application using `pip3`. **Note, the console application is only compatible with Python3**.
 <br>
 
 `pip3 install the-useful-tools`
