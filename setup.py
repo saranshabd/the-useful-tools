@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 """
     Copyright 2019 Shabd Saran
@@ -18,7 +18,7 @@ from setuptools import setup
 
 setup(
     name='the-useful-tools',
-    version='0.1',
+    version='0.4',
     py_modules=['useful'],
     install_requires=[
         'Click',
@@ -27,4 +27,5 @@ setup(
         [console_scripts]
         useful=useful:cli
     ''',
+    packages=find_packages(),
 )

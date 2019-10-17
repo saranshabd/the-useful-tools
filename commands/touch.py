@@ -50,4 +50,4 @@ def touch(file_name: str):
         else:
             # create a regular new file
 
-            file_utils.create_empty_file()
+            file_utils.create_empty_file(file_name)
