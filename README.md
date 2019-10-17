@@ -1,4 +1,4 @@
-# useful-tools
+# the-useful-tools
 
 These are some sets of tools that come in real handy for handling projects with large number of files to maintain. These commands can also be used to maintain small project files. **The toolkit is available for Linux environment only.**
 
