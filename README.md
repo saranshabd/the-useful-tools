@@ -19,7 +19,7 @@ Following commands are available in our tookit:
 
 ## Github Tools
 
-- `useful git init [programming-language-abbreviation]`
+- `useful git init [-l/--language]`
   <br>
   Initialize git repository with necessary files already created for you. User will also be prompted to create a LICENSE file, but its optional. Following are the supported LICENSE types:
 
