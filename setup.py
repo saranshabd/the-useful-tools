@@ -17,7 +17,7 @@ from setuptools import setup
 """
 
 setup(
-    name='useful',
+    name='the-useful-tools',
     version='0.1',
     py_modules=['useful'],
     install_requires=[
