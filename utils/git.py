@@ -75,3 +75,9 @@ def push(branch: str) -> None:
             os.system(f'git push {remote} master')
         else:
             os.system(f'git push {remote} {branch}')
+
+
+def log():
+    """utility function to print git repository logs"""
+
+    os.system('git log > git.log && gedit git.log')

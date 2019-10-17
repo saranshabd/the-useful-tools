@@ -85,3 +85,16 @@ def commit(message: str, branch: str):
 
     # push to remote repository
     git_utils.push(branch)
+
+
+@git.command()
+def log():
+    """log git commits"""
+
+    # check if git repository exists
+    if git_utils.check_git() is not True:
+        click.echo('ERROR: git repository for current directory does not exists')
+        return
+
+    # print git repository log
+    git_utils.log()

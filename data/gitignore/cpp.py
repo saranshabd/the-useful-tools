@@ -22,6 +22,8 @@ GITIGNORE: str = '''# vscode files
 **/*.txt
 **/*.out
 
+git.log
+
 # script files
 **/*.sh
 '''

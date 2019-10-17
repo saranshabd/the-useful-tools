@@ -26,6 +26,8 @@ env/
 # IO files
 **/*.txt
 
+git.log
+
 # script files
 **/*.sh
 '''

@@ -27,6 +27,8 @@ node_modules/
 # IO files
 **/*.txt
 
+git.log
+
 # script files
 **/*.sh
 '''
