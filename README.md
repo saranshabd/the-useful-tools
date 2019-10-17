@@ -34,6 +34,14 @@ Following commands are available in our tookit:
 
 <br>
 
+## File Management Tools
+
+- `useful touch <file_name>`
+  <br>
+  Works the same was as regular `touch` UNIX command, except if the LICENSE_NOTICE file is present in the project directory, it creates the new file with license notice already included. Automatic license notice addition is only valid for supported languages.
+
+<br>
+
 #### Supported Programming Languages (with abbreviations)
 
 - C (c)
